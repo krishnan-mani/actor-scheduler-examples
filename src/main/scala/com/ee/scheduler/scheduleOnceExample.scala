@@ -12,6 +12,11 @@ object ScheduleOnceExample {
   val thirty_seconds = new FiniteDuration(30, "seconds")
   val fifty_seconds = new FiniteDuration(50, "seconds")
 
+/* 
+  Following examples are to schedule just one invocation
+  Similar mechanism is used with the addition of a method argument for the frequency when scheduled to run at intervals
+*/
+
   def runOnceFuncExample() {
     scheduler.scheduleOnce(thirty_seconds)(println("Simple function that is run once with a delay"))
   }
